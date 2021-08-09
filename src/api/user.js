@@ -30,3 +30,13 @@ export function getUserName(params) {
     hideloading: true
   })
 }
+// 测试
+export function getReport(params) {
+  return request({
+    // url: 'LS-KK-backend/reportList/getReportList.action',
+    url: '/LS-KK-backend/reportList/getReportList.action?param0=&param15=2021&projectFlag=kk',
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
