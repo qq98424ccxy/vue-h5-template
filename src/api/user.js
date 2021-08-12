@@ -2,6 +2,8 @@ import api from './index'
 // axios
 import request from '@/utils/request'
 
+const controller = '/LS-KK-backend'
+
 // 登录
 export function login(data) {
   return request({
@@ -25,6 +27,16 @@ export function getUserInfo(data) {
 export function getUserName(params) {
   return request({
     url: api.UserName,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+// 测试
+export function getReport(params) {
+  return request({
+    // url: 'LS-KK-backend/reportList/getReportList.action',
+    url: `${controller}/reportList/getReportList.action?param0=&param15=2021&projectFlag=kk`,
     method: 'get',
     params,
     hideloading: true
